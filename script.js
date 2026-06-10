@@ -1,5 +1,5 @@
 // ================================
-// STARTUPOS MAIN SCRIPT
+// VentureSpark MAIN SCRIPT
 // ================================
 
 // SEARCH FUNCTIONALITY
@@ -288,7 +288,7 @@ document.querySelectorAll('a[href^="#"]')
 // PAGE LOADED
 // =================================
 
-console.log("StartupOS Loaded Successfully");
+console.log("VentureSpark Loaded Successfully");
 // =================================
 // SMART STARTUP COPILOT
 // =================================
@@ -494,6 +494,7 @@ const founderFacts = [
 "📱 Instagram originally started as a location-sharing app called Burbn.",
 
 "🛒 Flipkart's founders delivered books themselves in the early days.",
+"🦄 Canva was rejected by over 100 investors before becoming a multi-billion dollar company.",
 
 "🏏 Zerodha became India's largest broker without spending heavily on advertising."
 
@@ -572,112 +573,6 @@ streak
 
 streakElement.innerText =
 streak + " Days";
-
-});
-
-}
-const mentorBtn =
-document.getElementById("findMentorBtn");
-
-if(mentorBtn){
-
-mentorBtn.addEventListener("click",()=>{
-
-const stage =
-document.getElementById("mentorStage").value;
-
-const need =
-document.getElementById("mentorNeed").value;
-
-const result =
-document.getElementById("mentorResult");
-
-if(stage==="funding"){
-
-result.innerHTML=`
-
-<div class="card">
-
-<h3>💰 Funding Mentors</h3>
-
-<p>
-Recommended:
-Startup India Advisors,
-FITT Experts,
-Angel Investors
-</p>
-
-<a href="funding.html">
-
-<button>
-
-Explore Funding
-
-</button>
-
-</a>
-
-</div>
-
-`;
-
-}
-
-else if(need==="product"){
-
-result.innerHTML=`
-
-<div class="card">
-
-<h3>🛠 Product Mentors</h3>
-
-<p>
-Recommended:
-Product Managers,
-Startup Founders,
-YC Resources
-</p>
-
-<a href="resources.html">
-
-<button>
-
-View Resources
-
-</button>
-
-</a>
-
-</div>
-
-`;
-
-}
-
-else{
-
-result.innerHTML=`
-
-<div class="card">
-
-<h3>🚀 General Mentor Match</h3>
-
-<p>
-Book a discovery session with eDC mentors.
-</p>
-
-<button
-onclick="window.open('https://www.edciitd.com','_blank')">
-
-Book Session
-
-</button>
-
-</div>
-
-`;
-
-}
 
 });
 
