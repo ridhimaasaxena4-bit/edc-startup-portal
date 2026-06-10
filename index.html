@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StartupOS | eDC IIT Delhi</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="home-page">
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            Founder's Compass
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="journey.html">Journey</a>
+            </li>
+
+            <li>
+                <a href="funding.html">Funding</a>
+            </li>
+
+            <li>
+                <a href="ecosystem.html">Ecosystem</a>
+            </li>
+
+            <li>
+                <a href="resources.html">Resources</a>
+            </li>
+
+            <li>
+                <a href="mentors.html">Mentors</a>
+            </li>
+
+            <li>
+                <a href="copilot.html">Copilot</a>
+            </li>
+
+        </ul>
+
+        
+        <button onclick="window.open('https://www.edciitd.com','_blank')">
+
+            Join EDC
+
+        </button>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="badge">
+            Powered by eDC IIT Delhi
+        </div>
+
+        <h1>
+            The Operating System For Student Founders
+        </h1>
+
+        <p>
+            Everything you need from startup idea → validation → MVP → funding → scale.
+        </p>
+
+        <div class="search-box">
+
+            <input id="searchInput" placeholder="What do you need today?">
+
+            <button onclick="location.href='resources.html'">
+                Explore Resources
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PERSONAS -->
+
+    <section class="section">
+
+        <h2>Choose Your Path</h2>
+
+        <div class="persona-grid">
+
+            <div class="persona-card">
+
+                <h3>🚀 Explorer</h3>
+
+                <p>
+                    I want startup exposure.
+                </p>
+
+            </div>
+
+            <div class="persona-card">
+
+                <h3>💡 Builder</h3>
+
+                <p>
+                    I already have an idea.
+                </p>
+
+            </div>
+
+            <div class="persona-card">
+
+                <h3>🛠 Founder</h3>
+
+                <p>
+                    I'm building an MVP.
+                </p>
+
+            </div>
+
+            <div class="persona-card">
+
+                <h3>🔬 Researcher</h3>
+
+                <p>
+                    I want to commercialize research.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK ACCESS -->
+
+    <section class="section">
+
+        <h2>Quick Access</h2>
+
+        <div class="journey-grid">
+
+            <div class="card">
+
+                <h3>🛣 Startup Journey</h3>
+
+                <p>
+                    Follow a founder roadmap from idea to scale.
+                </p>
+
+                <br>
+
+                <button onclick="location.href='journey.html'">
+                    Open
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>💰 Funding Database</h3>
+
+                <p>
+                    Grants, investors and startup programs.
+                </p>
+
+                <br>
+
+                <button onclick="location.href='funding.html'">
+                    Open
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>📚 Founder Resources</h3>
+
+                <p>
+                    Books, reports, courses and frameworks.
+                </p>
+
+                <br>
+
+                <button onclick="location.href='resources.html'">
+                    Open
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🧑‍🏫 Mentor Marketplace</h3>
+
+                <p>
+                    Find mentors for product, fundraising and AI.
+                </p>
+
+                <br>
+
+                <button onclick="location.href='mentors.html'">
+                    Open
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🏛 IITD Ecosystem</h3>
+
+                <p>
+                    Discover Makerspace, FITT, IHFC and i-TTO.
+                </p>
+
+                <br>
+
+                <button onclick="location.href='ecosystem.html'">
+                    Open
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🤖 Startup Copilot</h3>
+
+                <p>
+                    Get startup recommendations instantly.
+                </p>
+
+                <br>
+
+                <button onclick="location.href='copilot.html'">
+                    Open
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="section">
+
+<h2>💡 Founder Inspiration</h2>
+
+<div class="dashboard">
+
+<h3 id="factTitle">
+Today's Founder Fact
+</h3>
+
+<p id="founderFact">
+
+Loading...
+
+</p>
+
+</div>
+
+</section>
+    <section class="section">
+        <section class="section">
+            
+
+            <h2>This Week At EDC</h2>
+
+            <div class="dashboard">
+
+            <div class="stat-card">
+
+            <h3>142</h3>
+
+            <p>Active Founders</p>
+
+            </div>
+
+            <div class="stat-card">
+
+            <h3>28</h3>
+
+            <p>MVPs Built</p>
+
+            </div>
+
+            <div class="stat-card">
+
+            <h3>12</h3>
+
+            <p>Funding Applications</p>
+
+            </div>
+
+            <div class="stat-card">
+
+            <h3>63</h3>
+
+            <p>Mentor Sessions</p>
+
+            </div>
+
+            </div>
+
+            </section>
+
+        <h2>Founder Dashboard Preview</h2>
+
+        <div class="dashboard">
+
+            <h3>
+                Current Stage: Validation
+            </h3>
+
+            <ul>
+
+                <li>✅ Problem Statement</li>
+
+                <li>✅ Customer Interviews</li>
+
+                <li>⬜ Build MVP</li>
+
+                <li>⬜ Meet Mentor</li>
+
+                <li>⬜ Apply For Grant</li>
+
+            </ul>
+
+            <div class="progress">
+
+                <div class="fill"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="section">
+
+<h2>🌟 Founder of the Week</h2>
+
+<div class="card">
+
+<h3>Nikhil Kamath</h3>
+
+<p>
+Co-founder of Zerodha.
+Built India's largest stock brokerage while remaining profitable.
+</p>
+
+<button onclick="window.open('https://zerodha.com','_blank')">
+
+Learn More
+
+</button>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2>🎯 Startup Wisdom</h2>
+
+<div class="dashboard">
+
+<p id="quoteBox">
+
+Click below for motivation.
+
+</p>
+
+<button id="quoteBtn">
+
+Generate Quote
+
+</button>
+
+</div>
+
+</section>
+<div class="dashboard">
+
+<h2>🔥 Founder Streak</h2>
+
+<h1 id="streak">
+
+1 Day
+
+</h1>
+
+<p>
+Keep building every day.
+</p>
+
+<button id="streakBtn">
+
+I Worked On My Startup Today
+
+</button>
+
+</div>
+<section class="section">
+
+<h2>📅 Book A Session</h2>
+
+<div class="dashboard">
+
+<h3>30 Minute Founder Consultation</h3>
+
+<p>
+Discuss your startup with an experienced mentor.
+</p>
+
+<button
+onclick="window.open('https://calendly.com','_blank')">
+
+Book Now
+
+</button>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2>📅 This Week's Office Hours</h2>
+
+<div class="journey-grid">
+
+<div class="card">
+
+<h3>Product Strategy</h3>
+
+<p>
+Friday 6 PM
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Fundraising AMA</h3>
+
+<p>
+Saturday 11 AM
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Startup Clinics</h3>
+
+<p>
+Sunday 4 PM
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            StartupOS
+        </h3>
+
+        <p>
+            Built For IIT Delhi Entrepreneurs
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
