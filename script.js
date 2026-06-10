@@ -321,6 +321,7 @@ if (askBtn) {
             response.innerHTML = `
 
             <h3>🤖 AI Startup Roadmap</h3>
+            <p><b>Startup Readiness Score:</b> 78/100</p>
 
             <p><b>Target Users:</b> Students, professionals, businesses</p>
 
