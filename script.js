@@ -14,6 +14,7 @@ function handleSearch() {
     const query = searchInput.value
         .toLowerCase()
         .trim();
+    console.log("Search query:", query);
 
     // FUNDING
 
@@ -94,26 +95,50 @@ function handleSearch() {
         window.location.href = "copilot.html";
     }
     else if(
-        query.includes("journey")
-    ){
-        window.location.href="journey.html";
-    }
+
+    query.includes("journey") ||
+    query.includes("startup journey")
+
+){
+    window.location.href="journey.html";
+}
 
     else if(
-        query.includes("ecosystem")
-    ){
-        window.location.href="ecosystem.html";
-    }
+
+    query.includes("ecosystem") ||
+    query.includes("iitd") ||
+    query.includes("fitt") ||
+    query.includes("ihfc") ||
+    query.includes("makerspace")
+
+){
+    window.location.href="ecosystem.html";
+}
 
     else if(
         query.includes("copilot")
     ){
         window.location.href="copilot.html";
     }
+    else if (
+
+    query.includes("resource") ||
+    query.includes("resources") ||
+    query.includes("book") ||
+    query.includes("books") ||
+    query.includes("learn")
+
+){
+    window.location.href="resources.html";
+}
     // DEFAULT
 
     else {
-        window.location.href = "resources.html";
+
+        alert(
+        "No exact match found.\n\nTry:\n• Funding\n• Mentors\n• Journey\n• Resources\n• Ecosystem\n• Copilot"
+        );
+
     }
 }
 
@@ -264,7 +289,9 @@ document.querySelectorAll('a[href^="#"]')
 // =================================
 
 console.log("StartupOS Loaded Successfully");
-// COPILOT
+// =================================
+// SMART STARTUP COPILOT
+// =================================
 
 const askBtn = document.getElementById("askBtn");
 
@@ -273,54 +300,175 @@ if (askBtn) {
     askBtn.addEventListener("click", () => {
 
         const input =
-            document.getElementById("userInput").value.toLowerCase();
+            document.getElementById("userInput")
+            .value
+            .toLowerCase();
 
         const response =
             document.getElementById("response");
 
         response.style.display = "block";
 
-        if(input.includes("ai")){
+        // AI
+
+        if (
+            input.includes("ai") ||
+            input.includes("machine learning") ||
+            input.includes("llm") ||
+            input.includes("agent")
+        ) {
 
             response.innerHTML = `
+
             <h3>🤖 AI Startup Roadmap</h3>
 
-            <ul>
-            <li>Validate with 20 users</li>
-            <li>Build MVP using OpenAI APIs</li>
-            <li>Apply to YC Startup School</li>
-            <li>Target first 100 users</li>
-            <li>Explore Antler / Peak XV funding</li>
-            </ul>
+            <p><b>Target Users:</b> Students, professionals, businesses</p>
+
+            <p><b>MVP:</b> Build one powerful AI feature first.</p>
+
+            <p><b>Validation:</b> Interview 20+ potential users.</p>
+
+            <p><b>Funding:</b> Antler, Peak XV, IHFC Innovation Programs.</p>
+
+            <p><b>Resources:</b> YC Startup School, Lean Startup.</p>
+
+            <p><b>Next Goal:</b> Reach first 100 active users.</p>
+
             `;
         }
 
-        else if(input.includes("health")){
+        // EDTECH
+
+        else if (
+            input.includes("education") ||
+            input.includes("student") ||
+            input.includes("learning") ||
+            input.includes("edtech")
+        ) {
 
             response.innerHTML = `
-            <h3>🏥 Health Startup Roadmap</h3>
 
-            <ul>
-            <li>Interview doctors</li>
-            <li>Validate clinical need</li>
-            <li>Build pilot</li>
-            <li>Apply for BIRAC grants</li>
-            </ul>
+            <h3>📚 EdTech Startup Roadmap</h3>
+
+            <p><b>Target Users:</b> Students and educators.</p>
+
+            <p><b>MVP:</b> Simple web platform solving one learning problem.</p>
+
+            <p><b>Validation:</b> Interview students and teachers.</p>
+
+            <p><b>Funding:</b> Startup India, Education Grants.</p>
+
+            <p><b>Resources:</b> YC Library, Product-Market Fit Guide.</p>
+
+            <p><b>Next Goal:</b> Get first 50 engaged students.</p>
+
             `;
         }
 
-        else{
+        // HEALTHCARE
+
+        else if (
+            input.includes("health") ||
+            input.includes("medical") ||
+            input.includes("doctor") ||
+            input.includes("hospital")
+        ) {
 
             response.innerHTML = `
-            <h3>🚀 General Startup Roadmap</h3>
 
-            <ul>
-            <li>Identify customer problem</li>
-            <li>Conduct interviews</li>
-            <li>Build MVP</li>
-            <li>Acquire first users</li>
-            <li>Raise funding</li>
-            </ul>
+            <h3>🏥 Healthcare Startup Roadmap</h3>
+
+            <p><b>Target Users:</b> Patients, clinics and hospitals.</p>
+
+            <p><b>MVP:</b> Appointment, tracking or diagnostic solution.</p>
+
+            <p><b>Validation:</b> Talk to doctors before building.</p>
+
+            <p><b>Funding:</b> BIRAC Grants and HealthTech accelerators.</p>
+
+            <p><b>Resources:</b> Startup India Learning Hub.</p>
+
+            <p><b>Next Goal:</b> Pilot with one clinic.</p>
+
+            `;
+        }
+
+        // FINTECH
+
+        else if (
+            input.includes("finance") ||
+            input.includes("fintech") ||
+            input.includes("payment") ||
+            input.includes("bank")
+        ) {
+
+            response.innerHTML = `
+
+            <h3>💰 FinTech Startup Roadmap</h3>
+
+            <p><b>Target Users:</b> Consumers and businesses.</p>
+
+            <p><b>MVP:</b> One focused financial workflow.</p>
+
+            <p><b>Validation:</b> Interview users about money habits.</p>
+
+            <p><b>Funding:</b> Venture Catalysts, Angel Networks.</p>
+
+            <p><b>Resources:</b> YC Library and FinTech founder case studies.</p>
+
+            <p><b>Next Goal:</b> Reach first 100 transactions.</p>
+
+            `;
+        }
+
+        // CLIMATE
+
+        else if (
+            input.includes("climate") ||
+            input.includes("energy") ||
+            input.includes("sustainability") ||
+            input.includes("green")
+        ) {
+
+            response.innerHTML = `
+
+            <h3>🌱 ClimateTech Startup Roadmap</h3>
+
+            <p><b>Target Users:</b> Industries and sustainability-focused consumers.</p>
+
+            <p><b>MVP:</b> Prototype showing measurable impact.</p>
+
+            <p><b>Validation:</b> Talk to potential adopters.</p>
+
+            <p><b>Funding:</b> Government innovation grants and impact funds.</p>
+
+            <p><b>Resources:</b> Climate founder communities.</p>
+
+            <p><b>Next Goal:</b> Secure pilot deployment.</p>
+
+            `;
+        }
+
+        // GENERAL
+
+        else {
+
+            response.innerHTML = `
+
+            <h3>🚀 Founder Roadmap</h3>
+
+            <p><b>Step 1:</b> Identify a painful problem.</p>
+
+            <p><b>Step 2:</b> Interview 15–20 users.</p>
+
+            <p><b>Step 3:</b> Build a simple MVP.</p>
+
+            <p><b>Step 4:</b> Get first users.</p>
+
+            <p><b>Step 5:</b> Improve using feedback.</p>
+
+            <p><b>Step 6:</b> Explore grants and investors.</p>
+
             `;
         }
 
