@@ -398,7 +398,7 @@ Math.random()*quotes.length
 
 }
 
-}
+
 const streakElement =
 document.getElementById("streak");
 
